@@ -35,7 +35,7 @@ jobs:
       DB_PASSWORD: affectpro_dev_password
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: 21
@@ -68,5 +68,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:latest
-            ghcr.io/${{ github.repository }}:${{ github.sha }}
+            ghcr.io/sitr4ka/affectation-api:latest
+            ghcr.io/sitr4ka/affectation-api:${{ github.sha }}
